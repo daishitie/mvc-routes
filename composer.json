@@ -1,0 +1,24 @@
+{
+    "name": "daishitie/mvc",
+    "description": "daishitie",
+    "type": "project",
+    "authors": [
+        {
+            "name": "daishitie",
+            "email": "daishitie@otakunity.net"
+        }
+    ],
+    "require": {},
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
