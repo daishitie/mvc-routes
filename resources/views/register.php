@@ -1,25 +1,17 @@
 <h1>Create an account</h1>
 
-<form action="" method="post">
-    <div class="form-group">
-        <label>Name</label>
-        <input type="text" name="username" class="form-control">
-    </div>
+<?php
 
-    <div class="form-group">
-        <label>Username</label>
-        <input type="text" name="username" class="form-control">
-    </div>
+$form = App\Libraries\Form\Form::begin('/register', 'post');
 
-    <div class="form-group">
-        <label>Email</label>
-        <input type="text" name="email" class="form-control">
-    </div>
+echo $form->field($model, 'name');
+echo $form->field($model, 'username');
+echo $form->field($model, 'email');
+echo $form->field($model, 'password')->passwordField();
+echo $form->field($model, 'confirmPassword')->passwordField();
 
-    <div class="form-group">
-        <label>Password</label>
-        <input type="password" name="password" class="form-control">
-    </div>
+?>
 
-    <button type="submit" class="btn btn-primary">Submit</button>
-</form>
+<button type="submit" class="btn btn-primary">Submit</button>
+
+<?php App\Libraries\Form\Form::end(); ?>

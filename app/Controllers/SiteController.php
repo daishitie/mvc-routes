@@ -2,7 +2,6 @@
 
 namespace App\Controllers;
 
-use App\Libraries\Application;
 use App\Libraries\Controller;
 use App\Libraries\Request;
 
@@ -29,6 +28,7 @@ class SiteController extends Controller
     public function handleContact(Request $request)
     {
         $body = $request->getBody();
+
         return 'submit contact info';
     }
 }
